@@ -2,18 +2,22 @@
 <html lang="en">
     <head>
         <!-- Google tag (gtag.js) -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-X47TFFX3Q4"></script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-91W5YJSP4V"></script>
         <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
 
-        gtag('config', 'G-X47TFFX3Q4');
-</script>
+        gtag('config', 'G-91W5YJSP4V');
+        </script>
+        
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>ADVENTURE</title>
+
+        
+       
        
         <link
             rel="stylesheet"
@@ -43,6 +47,70 @@
     <body
         onload='if (window.location.href.substr(window.location.href.length - 6) == "#about") { introAboutLogoTransition(); }'
     >
+            <!-- Add this before </body> -->
+    <div id="discount-popup">
+        <div class="popup-content">
+            <span class="close-btn" onclick="closePopup()">&times;</span>
+            <h2>Exclusive Offer!</h2>
+            <p>Get <strong>20% OFF</strong> on your second booking. Hurry up!</p>
+            <a href="#tours" class="cta-btn">Book Now and Get Discount on Second booking </a>
+        </div>
+    </div>
+
+    <style>
+        #discount-popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 20px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            text-align: center;
+            z-index: 1000;
+            width: 300px;
+        }
+        .popup-content {
+            position: relative;
+        }
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        .cta-btn {
+            display: inline-block;
+            background: #ff5722;
+            color: white;
+            padding: 10px 15px;
+            margin-top: 10px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .cta-btn:hover {
+            background: #e64a19;
+        }
+    </style>
+
+    <script>
+        function showPopup() {
+            document.getElementById("discount-popup").style.display = "block";
+        }
+
+        function closePopup() {
+            document.getElementById("discount-popup").style.display = "none";
+        }
+
+        // Show popup after 3 seconds
+        setTimeout(showPopup, 3000);
+    </script>
+
+
+
         <!--navbar-->
         <nav class="navbar glass" style="height: 70px">
             <span
